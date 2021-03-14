@@ -1,0 +1,22 @@
+{% for wine in wines %}
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 card-center">
+    <div class="card">
+        <img
+        src="../build/images/wM1Yq4UTyU2NOJM-Mw44Ig.png"
+        class="card-img-top"
+        alt="..."
+        />
+        <div class="card-body">
+           <div class="container-fluid">
+                <h5 class="card-title">{{wine.title}}</h5>
+                <p>$ {{wine.price}}</p>
+                {% for award in wine.awards %}
+                <p class="card-text">
+                {{award.event}}
+                </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

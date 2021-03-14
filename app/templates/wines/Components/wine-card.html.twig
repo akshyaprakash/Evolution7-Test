@@ -1,0 +1,9 @@
+      <div class="cardSection">
+        <div class="container">
+          <div class="row">
+             {% for i in (1..10) %}
+                {{include ('/wines/Components/card-section.html.twig')}}
+            {% endfor %}
+        </div>
+    </div>
+</div>
